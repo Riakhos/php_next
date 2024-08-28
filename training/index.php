@@ -265,3 +265,111 @@ switch($couleur) {
 }
 
 ?>
+
+<br><hr>
+
+<h2>Fonctions prédéfinies</h2>
+
+<?php
+
+$phrase = 'texte1 texte2 texte3 texte4 texte5 texte6 texte7 texte8 texte9';
+echo $phrase . '<br>';
+
+// Fonction qui permet de vopir le nombre de caractères d'une chaîne :
+echo iconv_strlen($phrase) . '<br>';
+
+// Exemple sur le nombre de caractère d'un mot de passe :
+$password = 'rtzyhrzeyzrteyztytrzyz';
+$nbCaractere = iconv_strlen($password);
+
+if($nbCaractere < 10) {
+    echo 'Mot de passe trop petit';
+}
+
+// Afficher le début d'une chaîne :
+echo substr($phrase, 0, 27) . '...<br>';
+
+// Afficher l'année actuelle :
+echo date("l") . '<br>';
+
+?>
+
+<br><hr>
+
+<h2>Fonctions Utilisateurs</h2>
+
+<?php
+
+// Je crée une fonction :
+function bonjour() {
+    echo 'Bonjour <br>';
+}
+
+// Je l'exécute :
+bonjour();
+
+// Fonction avec un paramère :
+function bonjour2($x) {
+    echo 'Bonjour ' . $x . '.<br>';
+}
+
+bonjour2('Richard');
+bonjour2('Anisse');
+
+// Varirable locale (qui est créée à l'intérieur d'une fonction) :
+function dayWeek() {
+    $day = 'mercredi <br>';
+    return $day;
+}
+
+// Ca ne marche pas car la variable est dans la fonction
+// dayWeek();
+// echo $day;
+
+// Ca marche car j'affiche ce que la fonction me retourne :
+echo dayWeek();
+
+$r = dayWeek();
+echo $r;
+
+// Variable globale (qui créée en dehors d'une fonction) :
+$pays = 'France';
+
+function screenPays() {
+    // On va récupérer la variable dans l'espace global :
+    global $pays;
+    echo $pays . '<br>';
+}
+
+screenPays();
+
+?>
+
+<br><hr>
+
+<h2>Structures Itératives (boucles)</h2>
+
+<?php
+
+// While :
+$i = 0;
+// J'ouvre ma boucle :
+while($i <= 5) {
+    echo 'Bonjour '  . $i . ' --- ';
+    $i++;
+}
+
+echo '<br>';
+
+// Refaire la même boucle sans  les '---' :
+$i = 0;//* Remise à zéro de la variable
+while($i <= 5) {//* Paramètre de la boucle
+    if($i == 5) {//*Condition 1
+        echo 'Bonjour '  . $i . '<br>';//*Résultat 1
+    } else {//*Condition 2
+        echo 'Bonjour '  . $i . ' --- ';//*Résultat 2
+    }   
+    $i++;//*Itération à chaque tour
+}
+
+?>
