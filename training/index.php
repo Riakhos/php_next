@@ -372,4 +372,116 @@ while($i <= 5) {//* Paramètre de la boucle
     $i++;//*Itération à chaque tour
 }
 
+$i = 0;
+while($i < 5) {
+    echo 'Bonjour ' . $i . ' --- ';
+    $i++;
+    if($i == 5) {
+        echo 'Bonjour ' . $i . '.<br>';
+    }
+}
+
+// FOR :
+for($i = 0; $i <= 5; $i++) {
+    if($i == 5) {//*Condition 1
+        echo 'Tour numéro : '  . $i . '<br>' . '<br>';//*Résultat 1
+    } else {//*Condition 2
+        echo 'Tour numéro : '  . $i . ' --- ';//*Résultat 2
+    } 
+   // echo 'Tour numéro : ' . $i . ' -- ';
+}
+
+// Exercice : Faire un select qui affiche les années d'aujourd'hui à 1920 :
+echo '<select>';//liste déroulante <select> avec <option>
+    for($year = 2024; $year >= 1920; $year--) {
+        echo '<option>' . $year . '</option>';
+    }
+echo'</select>' . '<br>' . '<br>';
+
+echo '<select>';
+    for($year = date('Y'); $year >= 1920; $year--) {
+        echo '<option>' . $year . '</option>';
+    }
+echo'</select>' . '<br>' . '<br>';
+
+// Exercice : Créer un tableau de 10 lignes (tr) et 10 colonnes (td) par ligne numérotée de 00 à 99
+echo '<table border="1">';
+    $num = 0;// Création d'une variable pour ordonné la numérotation
+    for($row = 00; $row < 10; $row++) {// Boucle crée 10 lignes dans le tableau
+        echo '<tr>';
+        for($col = 00; $col < 10; $col++) {// Boucle crée 10 colonnes dans le tableau
+            $formatNum = str_pad($num, 2, '0', STR_PAD_LEFT);// La fonction str_pad($num, 2, '0', STR_PAD_LEFT) formate les nombres pour qu'ils soient toujours affichés avec deux chiffres (par exemple, 00, 01, 02, ..., 99).
+            echo '<td>' . $formatNum . '</td>';
+            $num++;
+        }
+        echo '</tr>';
+    }
+echo '</table>';
+
+?>
+
+<br><hr><br>
+
+<h2>Inclusions de fichiers</h2>
+
+<?php
+
+// INCLUDE :
+include ('fichier.php');
+include 'fichier.php';
+
+// REQUIRE :
+require ('fichier.php');
+
+?>
+
+<br><hr><br>
+
+<h2>Array</h2>
+
+<?php
+
+// Je créé un array :
+$liste = array('rouge', 'bleu', 'orange', 'jaune','rose');
+
+// Afficher l'array :
+print_r($liste);
+echo '<br>';
+var_dump($liste);// Plus de détails
+echo '<br>' . '<br>';
+
+// Afficher un seul élément :
+echo $liste[2] . '<br>';
+var_dump($liste[2]);
+echo '<br>' . '<br>';
+
+// Autre manière pour créer un array :
+$tab[] = 'France';
+$tab[] = 'Italie';
+$tab[] = 'Esapagne';
+$tab[] = 'Angleterre';
+var_dump($tab);
+echo  '<br>';
+// --------------------------------
+$test = ['France', 'Italie'];
+var_dump($test);
+echo '<br>' . '<br>';
+
+// Boucle foreach pour parcourir un array :
+foreach($tab as $indice => $valeur) {
+    echo $indice . ' : ' . $valeur . '<br>';
+}
+echo '<br>';
+
+// Fonction pour voir le nombre d'éléments dans un array :
+echo count($tab) . '<br>' . '<br>';
+
+// Tableau multidimensionnel :
+$tab_multi = array(0 => array('prenom' => 'Richard', 'nom' => 'Bonnegent'), 1 => array('prenom' => 'Abdelkader', 'nom' => 'Bakouche'));
+var_dump($tab_multi);
+echo '<br>';
+
+// Afficher seulement le prenom de Richard :
+echo $tab_multi[0]['prenom'];
+
 ?>
