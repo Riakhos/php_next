@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../xampp/htdocs/php_next"
+		}
+	],
+	"settings": {
+		"sqltools.connections": [],
+		"phpserver.browser": "firefox",
+		"liveServer.settings.multiRootWorkspaceName": "php_next"
+	}
+}
