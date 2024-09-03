@@ -1,7 +1,7 @@
 <?php
 
 // Je me connecte à la base de données :
-$pdo = new PDO('mysql:host=localhost;dbname=entreprise','root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+$pdo = new PDO('mysql:host=localhost;dbname=entreprise','root', 'tuhtzuhtzrtzryzrttzryh', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
 // PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING : permet d'afficher les errerus sql
 // PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8 : pour encoder les échanges avec la base en UTF8
