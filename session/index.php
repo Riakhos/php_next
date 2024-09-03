@@ -8,6 +8,23 @@
     <title>Pade d'Accueil</title>
 </head>
 
+<?php
+
+//*J'ouvre une session :
+session_start();
+
+//*J'enregistre des informations dans ma session :
+$_SESSION['prenom'] = 'Amin';
+$_SESSION['nom'] = 'HUSSEIN';
+
+//*Je supprime  une info de ma session
+unset($_SESSION['nom']);
+
+//*Supprimer une session :
+session_destroy();
+
+?>
+
 <body>
 
     <?php

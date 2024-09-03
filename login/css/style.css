@@ -1,0 +1,114 @@
+/** font **/
+@import url('#');
+/***reset de style***/
+*{    
+   margin: 0;
+   padding: 0;
+   outline: none;
+   box-sizing: border-box;/* permet de forcer le navigateur à calculer les paddings et les forcer dans la forme de la boite */
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    width: 100%;
+    height: 100%;    
+    position: relative;
+}
+body{
+    font-size: 1.9rem; /* = 19px résolution par défaut de caractère du navigateur */    
+    line-height: 1.333; /* la valeur est une proportion en rapport avec la hauteur de caractère, ici 1/3 de caractère pour la hauteur de la ligne */
+    font-family: 'Gupter' , sans-serif;
+    background-color: #f4f4f4;
+    /**background: url('#') center center no-repeat;
+        /** background:#000 url('fichier') center center no-repeat fixed;  cette ligne permet de concentrer en une seul toutes les déclarations ci-dessous**/
+            /* background-color: #000;
+            background-image: url('fichier');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;*/
+        /** background utilisation patterns => fond pour mettre sous des textures différentes**/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /**!vérifier la license de la police**/
+}
+a{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+}
+h1,h2,h3{
+    font-family: '#',sans-serif;
+}
+input,textarea,button,select{
+    font-family: '#', sans-serif;
+    font-size: 1.9rem;
+}
+
+/*? Formulaire d'inscription et de connexion*/
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+/** Styles des champs du formulaire **/
+label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+/** Styles du bouton **/
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+
+/* header */
+/* main */
+/* footer */
+
+
+
+
+
+
+
+/* div.btn-content{
+    background-color: #f00 !important;
+} */
+    /**!!attention la valeur [!important] permet de donner la priorité absolu sur un style**/
