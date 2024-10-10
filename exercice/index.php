@@ -2,7 +2,7 @@
 
 <?php
 
-// Créer une variable 'pays' qui stoscker l'information France. 
+// Créer une variable 'pays' qui stocker l'information France. 
 $pays = 'France';
 echo $pays . '<br>';
 // Vérifier le type de cette variable 
@@ -27,7 +27,7 @@ $nbFrance = 67970000;
 $nbEspagne = 47780000;
 echo $nbFrance . '<br>' . $nbEspagne .'<br>';
 
-// Créer une condition ppour comparer nbFrance et nbEspagne et afficher 'Il y a plus d'habitants en France' ou 'Il y a plus d'habitants en Espagne' 
+// Créer une condition pour comparer nbFrance et nbEspagne et afficher 'Il y a plus d'habitants en France' ou 'Il y a plus d'habitants en Espagne' 
 if($nbFrance > $nbEspagne) {
     echo 'Il y a plus d\'habitants en France.' . '<br>';
 } else {

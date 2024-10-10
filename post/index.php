@@ -10,7 +10,7 @@
 
 <?php
 
-// Si le formulaire a été posté j'affiche le prénom et la desscription :
+// Si le formulaire a été posté j'affiche le prénom et la description :
 if($_POST) {
     echo $_POST['prenom'] . '<br>' . $_POST['description'] . '<br>';
 }
